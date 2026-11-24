@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FeedbackManagement.Models.Feedback>
+
+@{
+    ViewData["Title"] = "Feedback List";
+}
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Submitted Feedback</h2>
+
+    <div class="card shadow">
+        <div class="card-body">
+
+            <table class="table table-bordered table-striped">
+
+                <thead class="table-primary">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Rating</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Subject</td>
+                            <td>@item.Rating / 5</td>
+                            <td>@item.Comments</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+            @if (!Model.Any())
+            {
+                <p class="text-center text-muted">
+                    No feedback submitted yet.
+                </p>
+            }
+
+        </div>
+    </div>
+
+</div>

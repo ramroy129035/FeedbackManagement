@@ -1,0 +1,43 @@
+﻿@model FeedbackManagement.Models.Feedback
+
+@{
+    ViewData["Title"] = "Feedback Submitted";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg border-0 text-center">
+
+        <div class="card-body p-5">
+
+            <h1 class="text-success mb-3">
+                Feedback Submitted Successfully!
+            </h1>
+
+            <h4>Thank You, @Model.Name!</h4>
+
+            <p class="lead mt-3">
+                Your valuable feedback has been received.
+            </p>
+
+            <hr />
+
+            <p><strong>Email:</strong> @Model.Email</p>
+
+            <p><strong>Subject:</strong> @Model.Subject</p>
+
+            <p><strong>Rating:</strong> @Model.Rating / 5</p>
+
+            <p><strong>Comments:</strong> @Model.Comments</p>
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-primary mt-3">
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

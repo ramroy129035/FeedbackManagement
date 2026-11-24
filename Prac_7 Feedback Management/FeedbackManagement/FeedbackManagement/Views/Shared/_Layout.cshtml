@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Feedback Management</title>
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet"
+          href="~/css/site.css" />
+</head>
+
+<body>
+    <header>
+        <partial name="_Navbar" />
+    </header>
+   
+    <main class="container mt-4 mb-5">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            © 2026 Feedback Management System |
+            All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
